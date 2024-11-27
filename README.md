@@ -10,21 +10,25 @@ Run main.py for the game to run. I'd recommend creating a shortcut and hiding th
 
 General Use:
 * Click on the board to make a move. You don't have an opponent, since the aim is to learn the Joseki playing as either white or black, so stones you place will alternate between black and white (black plays first).
+* You start with an empty library, and you need to add Joseki manually.
+* Any Joseki you store will be saved in 8 different permutations (two reflections in each corner of the board).
+* To explore existing and save new Joseki, just play the moves on the board. Green dots will appear in any space that would continue a Joseki you already have saved. If there are no dots, the position you're in isn't in the library.
+* My magnum opus: in test-mode you'll be given a random Joseki from your library at a random point through the sequence, as well as a stone on the 'TEST' button telling you which colour will play next. You'll then respond with a move, and if that move is one of the possible moves (according to your saved Joseki), the move will be played and you'll be shown the next moves if you want to continue. If you get it wrong, the move won't be played and you'll be shown what the possible correct moves were.
 * I haven't coded in the rule of Ko, since it's more work that will just make my code messier, and anyone who plays go will understand that it's not allowed regardless.
-* For the same reasons, you're still able to place a stone where it would be captured instantly.
-* Any Joseki you save will be saved in all four corners, in each possible reflection.
-* Unless in test-mode (we'll get there shortly), green dots will be placed in any of your available next moves, according to the Joseki that you have already saved (you start with none).  
+* For the same reasons, you're still able to place a stone where it would be captured instantly.  
+
 
 Buttons:
-* UNDO MOVE - Undoes the last move you made. This will also work after answering a test question to go even earlier in the Joseki than you began.
+* UNDO MOVE - Undoes the last move you've made. This also lets you travel back through a Joseki after answering a test question, even before the random state you began with.
 * CLEAR ALL - Clears the board.
-* SAVE JOSEKI - Saves the current position as a new Joseki (if it doesn't already have it saved). It will be saved in 8 permutations, one for each reflection and each corner. If you want to you can even save an entire game rather than just a Joseki.
+* SAVE JOSEKI - Saves the current position to your library as a new Joseki (if it doesn't already have it saved). If you want to you can even save an entire game rather than just a Joseki.
 * DELETE JOSEKI - Deletes all permutations of whatever joseki you have played on the board.
-* TENUKI - Notes in the move sequence that the opponent has played a move somewhere else.
-* TEST - My magnum opus, when clicked you'll be given a random Joseki at a random point through the sequence, as well as a stone in the TEST square telling you whose move it is. You'll then respond with a move, and if that move is one of the possible moves (according to what you have saved), the move will be played and you'll be shown the following moves if you want to continue. If you get it wrong, the move won't play and you'll be shown what the possible correct moves were. After responding, you'll have to click the button again to be presented with a new problem.  
+* TENUKI - Notes in the move sequence that the player has played a move somewhere else.
+* TEST - When you press this button you'll trigger a test question. After answering, for another problem you'll need to press the button again.
 
 Sample Joseki:  
-For anyone who doesn't know enough about Go to play their own Joseki, but still wants to be able to see the functionality of the app.  
+(for anyone who doesn't know enough about Go to play their own Joseki, but still wants to be able to see the functionality of the app)  
+(paste this into the 'joseki.txt' file in the 'game' folder. Make sure to include an extra empty line at the bottom or it won't work)  
 
 ```txt
 c04e04e03f03d03f04d06k04
@@ -101,7 +105,6 @@ q16r17q17r16r15s15r14s14r13q18p18r18o17
 q04r03r04q03p03p02o03o02n03s04s05s03r06
 
 ```
-[Paste that into the joseki.txt file in the 'game' folder. Make sure to include an extra empty line at the bottom or it won't work]
 
 # Brief Reflection
 This is the first project involving a GUI that I've ever made without relying on someone else's tutorial. I thought I would hate the front-end development but I actually really enjoyed it in the end.  
@@ -111,6 +114,6 @@ Some things I struggled with:
 3. Working across multiple different files was also tough at first, but became easy pretty quickly.
 4. I also had to learn how to use github for this project.
 5. Designing the app and coming up with ideas in the first place was a bit harder than I had expected, still not bad though.
-6. My code is completely abhorrent. I originally made a version that ran from the console before doing any UI, and so at the end I had to delete around 150 lines of obsolete code. I was also left with a sytem of storing move sequences that looks like this: d03d05c05c06c04d06f04d10. That alone is fine, except it has to be converted to a list like this: ["d03", "d05", "co5", ...], and the moves have to be converted to this: "d03" => (3, 3), and throw in the fact that an option for a move is written as "TEN", I basically ended up with maybe 7 or 8 functions whose sole purposes were to translate between these formats, when i could've easily stored them in (3, 3) form if I had thought ahead more, or had the time and energy to go back and fix it across the 400+ lines of code.  
+6. My code is completely abhorrent. I originally made a version that ran from the console before doing any UI, and so at the end I had to delete around 150 lines of obsolete code. I was also left with a system of storing move sequences that looks like this: d03d05c05c06c04d06f04d10. That alone is fine, except it has to be converted to a list like this: ["d03", "d05", "co5", ...], and the moves have to be converted to this: "d03" => (3, 3), and throw in the fact that an option for a move is written as "TEN", I basically ended up with maybe 7 or 8 functions whose sole purposes were to translate between these formats, when i could've easily stored them in (3, 3) form if I had thought ahead more, or had the time and energy to go back and fix it across the 400+ lines of code.  
 
-Despite all these problems I never felt like I was doing a chore, I always enjoyed finding new solutions to problems I didn't know I would have, and coming up with solutions to a problem in school, even if that problem was 4 problems down the line.
+Despite all these problems I never felt like I was doing a chore, I always enjoyed finding new solutions to problems I didn't know I would have, and coming up with solutions to problems during the day, even if that problem was 4 problems down the line.
