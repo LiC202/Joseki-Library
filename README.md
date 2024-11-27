@@ -21,7 +21,7 @@ Buttons:
 * SAVE JOSEKI - Saves the current position as a new Joseki (if it doesn't already have it saved). It will be saved in 8 permutations, one for each reflection and each corner. If you want to you can even save an entire game rather than just a Joseki.
 * DELETE JOSEKI - Deletes all permutations of whatever joseki you have played on the board.
 * TENUKI - Notes in the move sequence that the opponent has played a move somewhere else.
-* TEST - My magnum opus, when clicked you'll be given a random Joseki at a random point through the sequence, as well as a stone in the TEST square telling you who's move it is. You'll then respond with a move, and if that move is one of the possible moves (according to what you have saved), the move will be played and you'll be shown the following moves if you want to continue. If you get it wrong, the move won't play and you'll be shown what the possible correct moves were. After responding, you'll have to click the button again to be presented with a new problem.  
+* TEST - My magnum opus, when clicked you'll be given a random Joseki at a random point through the sequence, as well as a stone in the TEST square telling you whose move it is. You'll then respond with a move, and if that move is one of the possible moves (according to what you have saved), the move will be played and you'll be shown the following moves if you want to continue. If you get it wrong, the move won't play and you'll be shown what the possible correct moves were. After responding, you'll have to click the button again to be presented with a new problem.  
 
 Sample Joseki:  
 For anyone who doesn't know enough about Go to play their own Joseki, but still wants to be able to see the functionality of the app.  
