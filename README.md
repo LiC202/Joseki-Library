@@ -9,7 +9,7 @@ For those who do but haven't heard of Joseki before, it's pretty much the equiva
 Run main.py for the game to run. I'd recommend creating a shortcut and hiding the folder away somewhere.  
 
 General Use:
-* Click on the board to make a move, turns will alternate between black and white (black plays first).
+* Click on the board to make a move. You don't have an opponent, since the aim is to learn the Joseki playing as either white or black, so stones you place will alternate between black and white (black plays first).
 * I haven't coded in the rule of Ko, since it's more work that will just make my code messier, and anyone who plays go will understand that it's not allowed regardless.
 * For the same reasons, you're still able to place a stone where it would be captured instantly.
 * Any Joseki you save will be saved in all four corners, in each possible reflection.
