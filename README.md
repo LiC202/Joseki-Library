@@ -6,7 +6,7 @@ For those who don't know the game of Go, you'll have to look it up somewhere els
 For those who do but haven't heard of Joseki before, it's pretty much the equivalent of an opening in Chess. The differences are that multiple can be played in a game since they're usually limited to a corner (of which there are obviously four). One other difference is that in Joseki, you have the option of Tenuki-ing, which means ignoring what your opponent did completely and playing somewhere else on the board. Because of the context dependant nature of playing Tenuki, I have added a button that "plays Tenuki", rather than you, the user, needing to play somewhere else specific.
 
 # How To Use
-Run main.py for the game to run. I'd recommend creating a shortcut and hiding the folder away somewhere.  
+Run 'main.exe' or the 'Joseki Library' shortcut for the game to run. 
 
 General Use:
 * Click on the board to make a move. You don't have an opponent, since the aim is to learn the Joseki playing as either white or black, so stones you place will alternate between black and white (black plays first).
@@ -108,6 +108,7 @@ q04r03r04q03p03p02o03o02n03s04s05s03r06
 
 # Brief Reflection
 This is the first project involving a GUI that I've ever made without relying on someone else's tutorial. I thought I would hate the front-end development but I actually really enjoyed it in the end.  
+
 Some things I struggled with:
 1. I had a lot of issues with using pygame since I hadn't had much experience with it before, but I feel like I got the hang of it towards the end and really learned a lot.
 2. Problem solving was the most fun part of the project, but also where the most went wrong. Figuring out how to capture stones took the longest and had by far the most bugs surrounding it, but they did all get worked out eventually.
