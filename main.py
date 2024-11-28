@@ -191,12 +191,9 @@ def main():
                         if TESTING == False:
                             moves.append(move)
                         else:
-                            if checkInputMove(move, moves, josekiList): # CORRECT
-                                pass
-                            else: # WRONG
+                            if not checkInputMove(move, moves, josekiList): # CORRECT
                                 moves.pop()
                             TESTING = False
-                            print(moves)
 
                 else:
 
