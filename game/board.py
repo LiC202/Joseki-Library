@@ -110,11 +110,9 @@ class Board:
             if (pos+1)%19 > pos%19: liberties += check_pieces(1, liberties)
             if pos-19 >= 0: liberties += check_pieces(-19, liberties)
             if pos+19 <= 360: liberties += check_pieces(19, liberties)
-                
-            if group != []:
-                for neighbour in group:
-                    if neighbour not in checked_positions:
-                        liberties += count_liberties(board, neighbour, liberties)
+            
+            for neighbour in group:
+                if neighbour not in checked_positions: liberties += count_liberties(board, neighbour, liberties)
             return liberties
 
         for pos in range(len(board)):
