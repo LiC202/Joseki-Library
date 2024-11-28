@@ -152,7 +152,6 @@ def main():
     moves = []
     
     while run:
-        print(pygame.mouse.get_pos())
         clock.tick(FPS)
         josekiList = allJosekis()
 
