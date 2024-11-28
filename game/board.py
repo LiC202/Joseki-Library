@@ -66,8 +66,8 @@ class Board:
             win.blit(image, (rect.x, rect.y))
 
         # FILL SIDE PANEL
-        PANEL = pygame.image.load("game/images/PANEL.png").convert_alpha()
-        win.blit(PANEL, (BOARD_SIZE+PADDING, BOARD_OFFSET))
+        panel = pygame.image.load("game/images/PANEL.png").convert_alpha()
+        win.blit(panel, (BOARD_SIZE+PADDING, BOARD_OFFSET))
 
     def draw_piece(self, win, colour, move):
         x = SQUARE_SIZE * move[0] + BOARD_OFFSET
