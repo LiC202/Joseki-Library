@@ -1,3 +1,4 @@
+
 # Project
 
 #####IMPORTS#####################################################################################################################################################################################
@@ -216,27 +217,32 @@ def main():
                 
                     elif x >= BOARD_SIZE+PADDING and x <= BOARD_SIZE+PADDING+BUTTON_WIDTH and y >= BOARD_OFFSET+564+PADDING+BUTTON_HEIGHT+PADDING and y <= BOARD_OFFSET+564+PADDING+BUTTON_HEIGHT+BUTTON_HEIGHT+PADDING:
                         # SAVE JOSEKI
-                        joseki = translateListToPositioncode(moves)
-                        if joseki not in josekiList:
-                            saveJoseki(joseki)
+                        if TESTING == False:
+                            joseki = translateListToPositioncode(moves)
+                            if joseki not in josekiList:
+                                saveJoseki(joseki)
 
                     elif x >= BOARD_SIZE+PADDING+BUTTON_WIDTH+PADDING and x <= BOARD_SIZE+PADDING+BUTTON_WIDTH+PADDING+BUTTON_WIDTH and y >= BOARD_OFFSET+564+PADDING+BUTTON_HEIGHT+PADDING and y <= BOARD_OFFSET+564+PADDING+BUTTON_HEIGHT+PADDING+BUTTON_HEIGHT:
                         # DELETE JOSEKI
-                        allJoseki = getNewJosekis(translateListToPositioncode(moves))
-                        newJosekis = []
-                        for j in josekiList:
-                            if j not in allJoseki: newJosekis.append(j)
-                        clearData()
-                        for j in newJosekis: saveJoseki(j)
+                        if TESTING == False:
+                            allJoseki = getNewJosekis(translateListToPositioncode(moves))
+                            newJosekis = []
+                            for j in josekiList:
+                                if j not in allJoseki: newJosekis.append(j)
+                            clearData()
+                            for j in newJosekis: saveJoseki(j)
 
                     elif x >= BOARD_SIZE+PADDING and x <= BOARD_SIZE+PADDING+BUTTON_WIDTH and y >= BOARD_OFFSET+564+PADDING+BUTTON_HEIGHT+PADDING+BUTTON_HEIGHT+PADDING and y <= BOARD_OFFSET+564+PADDING+BUTTON_HEIGHT+PADDING+BUTTON_HEIGHT+BUTTON_HEIGHT+PADDING:
                         # UNDO MOVE
-                        if moves != []: moves.pop()
+                        if TESTING == False:
+                            if moves != []: moves.pop()
 
                     elif x >= BOARD_SIZE+PADDING+BUTTON_WIDTH+PADDING and x <= BOARD_SIZE+PADDING+BUTTON_WIDTH+PADDING+BUTTON_WIDTH and y >= BOARD_OFFSET+564+PADDING+BUTTON_HEIGHT+PADDING+BUTTON_HEIGHT+PADDING and y <= BOARD_OFFSET+564+PADDING+BUTTON_HEIGHT+PADDING+BUTTON_HEIGHT+BUTTON_HEIGHT+PADDING:
                         # CLEAR ALL
-                        moves = []
+                        if TESTING == False:
+                            moves = []
     
     pygame.quit()
 
 main()
+
