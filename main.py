@@ -82,15 +82,12 @@ def rotate90(joseki):
 
 # GETS ALL VARIATION JOSEKI
 def getNewJosekis(joseki):
-    newJosekis = []
-    newJosekis.append(joseki)
-    newJosekis.append(rotate90(joseki))
-    newJosekis.append(rotate90(rotate90(joseki)))
-    newJosekis.append(rotate90(rotate90(rotate90(joseki))))
+    newJosekis = [joseki]
+    for _ in range(3):
+        newJosekis.append(rotate90(newJosekis[-1]))
     for j in range(4):
         newJosekis.append(mirror(newJosekis[j]))
     return newJosekis
-
 
 # SAVES A JOSKI TO THE JOSEKI FILE
 def saveJoseki(joseki):
