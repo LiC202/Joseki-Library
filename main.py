@@ -152,6 +152,7 @@ def main():
     moves = []
     
     while run:
+        print(pygame.mouse.get_pos())
         clock.tick(FPS)
         josekiList = allJosekis()
 
@@ -172,7 +173,7 @@ def main():
                 mousey = ORIGINALmousepos[1]//SQUARE_SIZE
                 mousepos = [mousex, mousey]
 
-                inrange = True if mousex <= 19 and mousey <= 19 else False
+                inrange = True if ORIGINALmousepos[0] < 988 and ORIGINALmousepos[1] < 988 else False
                 
                 x = ORIGINALmousepos[0]
                 y = ORIGINALmousepos[1]
@@ -239,4 +240,3 @@ def main():
     pygame.quit()
 
 main()
-
