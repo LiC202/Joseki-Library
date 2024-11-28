@@ -30,7 +30,7 @@ Sample Joseki:
 (for anyone who doesn't know enough about Go to play their own Joseki, but still wants to be able to see the functionality of the app)  
 (paste this into the 'joseki.txt' file in the 'game' folder. Make sure to include an extra empty line at the bottom or it won't work)  
 
-```txt
+```plaintext
 c04e04e03f03d03f04d06k04
 q03q05r05r06r04q06o04q10
 r16p16p17o17q17o16q14k16
